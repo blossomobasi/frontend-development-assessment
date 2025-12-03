@@ -2,6 +2,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 
 import Button from "../ui/Button";
+import Registration from "../components/Registration";
 
 const Register = () => {
 	const [searchParams] = useSearchParams();
@@ -10,7 +11,7 @@ const Register = () => {
 	return (
 		<div className="bg-background px-5 min-h-screen h-full">
 			{searchParams.get("surveyCompleted") === "true" ? (
-				<div>You can freely register now</div>
+				<Registration />
 			) : (
 				<div className="bg-gray-50 flex justify-center p-6 py-20">
 					<div className="max-w-4xl w-full text-center">
