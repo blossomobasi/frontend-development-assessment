@@ -1,16 +1,18 @@
-import HomeMain from "./components/HomeMain";
-import OurCapabilities from "./components/OurCapabilities";
-import WhyRegister from "./components/WhyRegister";
-import BeginRegistrationProcess from "./components/BeginRegistrationProcess";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import Register from "./pages/Register";
+import NotFoundPage from "./pages/NotFoundPage";
+import Survey from "./pages/Survey";
 
 function App() {
 	return (
-		<div className="bg-background md:py-24 py-14 px-5">
-			<HomeMain />
-			<OurCapabilities />
-			<WhyRegister />
-			<BeginRegistrationProcess />
-		</div>
+		<Routes>
+			<Route path="/" element={<HomePage />} />
+			<Route path="register" element={<Register />} />
+			<Route path="survey" element={<Survey />} />
+			<Route path="*" element={<NotFoundPage />} />
+		</Routes>
 	);
 }
 export default App;
