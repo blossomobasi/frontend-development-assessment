@@ -1,4 +1,3 @@
-import React from "react";
 import Text from "../ui/Text";
 import { LuCircleCheck } from "react-icons/lu";
 import { Slide } from "../animation/Slide";
