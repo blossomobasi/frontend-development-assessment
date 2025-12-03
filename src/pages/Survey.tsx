@@ -73,7 +73,7 @@ const Survey = () => {
 				<div className="w-full">
 					<div className="text-center mb-8 w-full flex flex-col items-center">
 						<p className="text-sm text-primary font-semibold mb-2">READINESS CHECK</p>
-						<h1 className="text-3xl font-bold mb-6">AfCFTA Readiness Survey</h1>
+						<h1 className="md:text-3xl text-2xl font-bold mb-6">AfCFTA Readiness Survey</h1>
 
 						<div className="max-w-4xl w-full">
 							<div className="flex items-center justify-between text-sm mb-2">
@@ -93,11 +93,11 @@ const Survey = () => {
 					</div>
 
 					<div className="text-center mb-8">
-						<div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white mx-auto mb-6">
+						<div className="sm:w-20 sm:h-20 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white mx-auto mb-6">
 							<FaRegQuestionCircle size={35} />
 						</div>
 
-						<h2 className="text-4xl font-bold">{question.question}</h2>
+						<h2 className="lg:text-4xl md:text-3xl text-2xl font-bold">{question.question}</h2>
 					</div>
 
 					<div className="space-y-4 mb-8 max-w-2xl mx-auto">
@@ -157,13 +157,13 @@ const Survey = () => {
 		return (
 			<div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
 				<div className="max-w-2xl w-full">
-					<div className="bg-white rounded-3xl p-12 text-center shadow-lg">
+					<div className="bg-white rounded-3xl md:p-12 p-4 text-center shadow-lg">
 						<div
-							className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 ${
+							className={`md:w-20 md:h-20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 ${
 								isPerfectScore ? "bg-secondary" : "bg-accent"
 							}`}
 						>
-							<FaCheck size={40} className="text-white" />
+							<FaCheck className="text-white md:text-5xl text-2xl" />
 						</div>
 
 						<h1 className="text-4xl font-bold text-gray-900 mb-2">
