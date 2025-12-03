@@ -9,7 +9,7 @@ const Register = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="bg-background px-5 min-h-screen h-full">
+		<div className="bg-background md:px-5 min-h-screen h-full">
 			{searchParams.get("surveyCompleted") === "true" ? (
 				<Registration />
 			) : (
