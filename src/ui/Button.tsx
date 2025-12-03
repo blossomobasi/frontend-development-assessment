@@ -1,15 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type ButtonProps = {
 	children: React.ReactNode;
 	className?: string;
 	variant?: "primary" | "secondary";
 	type?: "button" | "submit" | "reset";
+	href?: string;
 	onClick?: () => void;
 	disabled?: boolean;
 };
 
-const Button = ({ children, className, variant = "primary", disabled, onClick, type }: ButtonProps) => {
+const Button = ({ children, className, variant = "primary", disabled, onClick, type, href }: ButtonProps) => {
+	if (href) {
+		return (
+			<Link
+				to={href}
+				className={`sm:py-2.5 py-2 px-5 sm:px-7 rounded-xl font-medium sm:text-lg text-base 
+				${
+					variant === "primary" &&
+					"bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg transition-shadow duration-300 "
+				}
+				
+				${
+					variant === "secondary" &&
+					"border border-stone-300 bg-transparent text-black hover:bg-accent hover:text-white transition-colors duration-300 "
+				}
+				${className}`}
+			>
+				{children}
+			</Link>
+		);
+	}
+
 	return (
 		<button
 			disabled={disabled}
