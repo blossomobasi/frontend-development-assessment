@@ -7,7 +7,7 @@ const BeginRegistrationProcess = () => {
 			<p className="max-w-3xl md:text-lg text-base text-gray mb-5">
 				Take the first step towards expanding your business across Africa. Complete your registration today.
 			</p>
-			<Button>Begin Registration Process</Button>
+			<Button href="/register">Begin Registration Process</Button>
 		</section>
 	);
 };
