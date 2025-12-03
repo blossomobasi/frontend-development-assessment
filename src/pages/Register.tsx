@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 import Button from "../ui/Button";
 import Registration from "../components/Registration";
+import { Slide } from "../animation/Slide";
 
 const Register = () => {
 	const [searchParams] = useSearchParams();
@@ -19,19 +20,23 @@ const Register = () => {
 							<span className="py-2 text-sm px-5 rounded-full bg-lightPrimary text-primary font-semibold mb-8">
 								AfCFTA Digital Trade Platform
 							</span>
-							<h1 className="lg:text-6xl md:text-5xl text-3xl font-bold">AfCFTA Readiness Survey</h1>
-							<p className="lg:text-2xl md:text-xl text-lg text-gray font-medium">
-								Before you register, please complete this 12-question readiness assessment. It helps us determine if
-								your business is fully prepared to participate in AfCFTA trade.
-							</p>
+							<Slide>
+								<h1 className="lg:text-6xl md:text-5xl text-3xl font-bold">AfCFTA Readiness Survey</h1>
+							</Slide>
+							<Slide>
+								<p className="lg:text-2xl md:text-xl text-lg text-gray font-medium">
+									Before you register, please complete this 12-question readiness assessment. It helps us determine if
+									your business is fully prepared to participate in AfCFTA trade.
+								</p>
+							</Slide>
 						</div>
 
-						<div className="flex justify-center">
+						<Slide delay={0.5} className="flex justify-center">
 							<Button onClick={() => navigate("/survey")} className="flex items-center gap-2 group">
 								Begin Assessment
 								<FaArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
 							</Button>
-						</div>
+						</Slide>
 					</div>
 				</div>
 			)}

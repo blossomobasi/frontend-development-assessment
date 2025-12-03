@@ -3,6 +3,7 @@ import { HiOutlineGlobe } from "react-icons/hi";
 import { LuUsers } from "react-icons/lu";
 
 import Text from "../ui/Text";
+import { Slide } from "../animation/Slide";
 
 const OurCapabilities = () => {
 	const capabilities = [
@@ -34,8 +35,9 @@ const OurCapabilities = () => {
 			<Text>Our Capabilities</Text>
 
 			<div className="grid sm:grid-cols-3 grid-cols-1 md:gap-7 gap-5 max-w-6xl mx-auto">
-				{capabilities.map(({ title, description, Icon, foreground, background }) => (
-					<div
+				{capabilities.map(({ title, description, Icon, foreground, background }, index) => (
+					<Slide
+						towards={index % 2 === 0 ? "right" : "left"}
 						key={title}
 						className="bg-white border border-stone-300 md:p-6 p-4 rounded-2xl hover:shadow-xl transition-shadow duration-300"
 					>
@@ -44,7 +46,7 @@ const OurCapabilities = () => {
 						</div>
 						<h3 className="md:text-xl text-base font-semibold mb-2">{title}</h3>
 						<p className="text-gray md:text-base text-sm">{description}</p>
-					</div>
+					</Slide>
 				))}
 			</div>
 		</section>

@@ -5,6 +5,7 @@ import { LuCircleCheck } from "react-icons/lu";
 
 import Button from "../ui/Button";
 import MultiStepRegistration from "./MultiStepRegistration";
+import { Slide } from "../animation/Slide";
 
 const Registration = () => {
 	const [startRegistration, setStartRegistration] = React.useState(false);
@@ -12,7 +13,7 @@ const Registration = () => {
 	return (
 		<section>
 			{!startRegistration && (
-				<div className="flex items-center justify-center py-20 md:px-8 text-center">
+				<Slide className="flex items-center justify-center py-20 md:px-8 text-center">
 					<div className="max-w-2xl w-full rounded-2xl shadow-lg flex flex-col items-center md:p-12 p-4 bg-white">
 						<div className="w-fit py-2.5  px-5 rounded-full bg-secondary text-white font-semibold mb-8 flex items-center gap-2">
 							<LuCircleCheck size={20} />
@@ -52,7 +53,7 @@ const Registration = () => {
 							<p className="text-xs mt-2">Your progress will be automatically saved</p>
 						</div>
 					</div>
-				</div>
+				</Slide>
 			)}
 
 			{startRegistration && <MultiStepRegistration />}
