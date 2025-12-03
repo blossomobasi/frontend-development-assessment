@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 
 const HomeMain = () => {
+	const navigate = useNavigate();
+
 	return (
 		<main className="flex justify-center md:mb-24 mb-14">
 			<div className="flex flex-col items-center text-center">
@@ -17,7 +20,9 @@ const HomeMain = () => {
 				</p>
 
 				<div className="flex sm:flex-row flex-col gap-3 md:mt-10 mt-5 justify-center w-full">
-					<Button className="sm:w-fit w-full">Start Registration</Button>
+					<Button className="sm:w-fit w-full" onClick={() => navigate("/register")}>
+						Start Registration
+					</Button>
 					<Button className="sm:w-fit w-full" variant="secondary">
 						Learn More
 					</Button>
