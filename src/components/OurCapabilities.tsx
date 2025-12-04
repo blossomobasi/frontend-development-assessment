@@ -32,7 +32,9 @@ const OurCapabilities = () => {
 
 	return (
 		<section className="mt-5 mb-24">
-			<Text>Our Capabilities</Text>
+			<Slide delay={0.5}>
+				<Text>Our Capabilities</Text>
+			</Slide>
 
 			<div className="grid sm:grid-cols-3 grid-cols-1 md:gap-7 gap-5 max-w-6xl mx-auto">
 				{capabilities.map(({ title, description, Icon, foreground, background }, index) => (
